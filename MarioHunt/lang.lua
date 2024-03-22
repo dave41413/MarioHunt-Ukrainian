@@ -3438,6 +3438,553 @@ langdata["ro"] = -- by N64 (not to be mistaken for N64-Mario)
   menu_romhack_cam_desc = "Activeaza camera rom hack in orice moment.",
 }
 
+langdata["ua"] = -- the letters here will be what you type for the command (ex: to switch to this language, type "/lang en")
+{
+  -- fullname for auto select (make sure this matches in-game under Misc -> Languages)
+  fullname = "Ukrainian",
+
+  -- name in the built-in menu
+  name_menu = "Ukrainian",
+
+  -- global command info
+  to_switch = "Напіши \"/lang %s\" шоп мінять мову",
+  switched = "Паміняв до Україну!", -- Replace "English" with the name of this language
+  rule_command = "Напіши /rules шоп показать це апять",
+  open_menu = "Напіши /mh ілі нажмі L + Старт аткрить меню",
+  stalk = "Напіши /stalk шоп телепартеровать до бігуни!",
+  rules_desc = "- Показоває MarioHunt правила",
+  rules_desc_egg = "- Показоває LuigiHunt правили",
+  mh_desc = "[COMMAND,ARGS] - Виконує комманди; напиши нечого ілі \"menu\" шоп аткрить меню",
+  lang_desc = "%s - Паміні мову",
+  hard_desc = "[EX|ON|OFF,ON|OFF] - Включай нелегкий мод для тебе",
+  tc_desc = "[ON|OFF|MSG] - Скідать повідомлення до тім толька; включи шоп скінути до ВСІХ повідомлень",
+  stats_desc = "- Показувать/ховать стат стол",
+  stalk_desc = "[NAME|ID] - Warps to the level the specified player is in, or the first Runner",
+  spectate_desc = "[NAME|ID|OFF] - Spectate the specified player, free camera if not specified, or OFF to turn off", -- not to be confused with spectator_desc
+  target_desc = "[NAME|ID] - Set this Runner as your target, which displays their location at all times.",
+
+  -- roles
+  runner = "Бігуна",
+  runners = "Бігуни",
+  short_runner = "Б", -- unused
+  hunters = "Месливець",
+  hunter = "Месливць",
+  spectator = "Глядач",
+  player = "Плаїр",
+  players = "Плаїри",
+  all = "Всі",
+
+  -- rules
+  --[[
+    This is laid out as follows:
+    {welcome|welcome_mini}
+    {runners}{shown_above|thats_you}{any_bowser|collect_bowser|mini_collect}
+    {hunters}{thats_you}{all_runners|any_runners}
+    {rule_lives_one|rule_lives}{time_needed|stars_needed}{become_hunter|become_runner}
+    {infinite_lives}{spectate}
+    {banned_glitchless|banned_general}{fun}
+
+    I highly recommend testing this in-game
+    Also:
+    \\#ffffff\\ = white (default)
+    \\#00ffff\\ = cyan (for Runner team name)
+    \\#ff5a5a\\ = red (for Hunter team name and popups)
+    \\#ffff5a\\ = yellow
+    \\#5aff5a\\ = green
+    \\#b45aff\\ = purple (for Extreme Mode)
+  ]]
+  welcome = "Добро пожаловать до \\#00ffff\\Mario\\#ff5a5a\\Hunt\\#ffffff\\! КАК ГРАТИСЯ:",
+  welcome_mini = "Добро пожаловать до \\#ffff5a\\Mini\\#ff5a5a\\Hunt\\#ffffff\\! КАК ГРАТИСЯ:",
+  welcome_egg = "Добро пожаловать до \\#5aff5a\\Luigi\\#ff5a5a\\Hunt\\#ffffff\\! КАК ГРАТИСЯ:",
+  all_runners = "Убі всі \\#00ffff\\Бігані\\#ffffff\\.",
+  any_runners = "Убі всі \\#00ffff\\Убі всі\\#ffffff\\.", -- can someone explain what does this mean
+  shown_above = "(показона на верх)",
+  any_bowser = "Убі %s через \\#ffff5a\\всі\\#ffffff\\ маннери необхідно.",
+  collect_bowser = "Сабірі \\#ffff5a\\%d зірк(и)\\#ffffff\\ і убі %s.",
+  mini_collect = "Бить першим шоп \\#ffff5a\\сабрать зірку\\#ffffff\\.",
+  collect_only = "Сабірі \\#ffff5a\\%d зірк(s)\\#ffffff\\.",
+  thats_you = "(це ти!!)",
+  banned_glitchless = "НЕМОЖНА: Перехресне об’єднання команд, BLJs, обрізання стіни, зупинка, кемпінг.",
+  banned_general = "NO: Перехресне об’єднання команд, зупинка, кемпінг.",
+  time_needed = "%d:%02d шоп вийті всі головни сцени; збирай зірки для зменшення",
+  stars_needed = "%d хірк(и) шоп вийті всі головни сцени",
+  become_hunter = "стати \\#ff5a5a\\Hunters\\#ffffff\\ при поразці",
+  become_runner = "убі \\#00ffff\\Runner\\#ffffff\\ шоп стати одним",
+  infinite_lives = "Безканечни житьлі",
+  spectate = "введіть \"/spectate\", щоб переглянути",
+  mini_goal = "\\#ffff5a\\Перемагає той, хто збере найбільше зірок у %d:%02d!\\#ffffff\\",
+  fun = "Веселийся!",
+
+  -- hud, extra desc, and results text (%s is a placeholder for names, and %d is a placeholder for a number)
+  win = "%s\\#ffffff\\ победів!", -- team name is placed here
+  can_leave = "\\#5aff5a\\Can leave course",
+  cant_leave = "\\#ff5a5a\\Can't leave course",
+  time_left = "Can leave in \\#ffff5a\\%d:%02d",
+  stars_left = "Need \\#ffff5a\\%d star(s)\\#ffffff\\ to leave",
+  in_castle = "In castle",
+  until_hunters = "%d second(s) until \\#ff5a5a\\Hunters\\#ffffff\\ begin",
+  until_runners = "%d second(s) until \\#00ffff\\Runners\\#ffffff\\ begin",
+  lives_one = "1 life",
+  lives = "%d lives",
+  stars_one = "1 star",
+  stars = "%d stars",
+  no_runners = "No \\#00ffff\\Runners!",
+  camp_timer = "Keep moving! \\#ff5a5a\\(%d)",
+  game_over = "The game is over!",
+  winners = "Winners: ",
+  no_winners = "\\#ff5a5a\\No winners!",
+  death_timer = "Death",
+  mini_score = "Score: %d",
+  new_record = "\\#ffff5a\\NEW RECORD!!!",
+  on = "\\#5aff5a\\ON",
+  off = "\\#ff5a5a\\OFF",
+  frozen = "Frozen for %d",
+
+  -- popups
+  lost_life = "%s\\#ffa0a0\\ lost a life!",
+  lost_all = "%s\\#ffa0a0\\ lost all of their lives!",
+  now_role = "%s\\#ffa0a0\\ is now a %s\\#ffa0a0\\.",
+  got_star = "%s\\#ffa0a0\\ got a star!",
+  got_key = "%s\\#ffa0a0\\ got a key!",
+  rejoin_start = "%s\\#ffa0a0\\ has two minutes to rejoin.",
+  rejoin_success = "%s\\#ffa0a0\\ rejoined in time!",
+  rejoin_fail = "%s\\#ffa0a0\\ did not reconnect in time.",
+  leave_error = "%s\\#ffa0a0\\ left due to an error.",
+  using_ee = "This is using Extreme Edition only.",
+  not_using_ee = "This is using Standard Edition only.",
+  killed = "%s\\#ffa0a0\\ killed %s!",
+  sidelined = "%s\\#ffa0a0\\ finished off %s!",
+  paused = "You have been paused.",
+  unpaused = "You are no longer paused.",
+  kill_combo_2 = "%s\\#ffa0a0\\ got a \\#ffff5a\\double\\#ffa0a0\\ kill!",
+  kill_combo_3 = "%s\\#ffa0a0\\ got a \\#ffff5a\\triple\\#ffa0a0\\ kill!",
+  kill_combo_4 = "%s\\#ffa0a0\\ got a \\#ffff5a\\quadruple\\#ffa0a0\\ kill!",
+  kill_combo_5 = "%s\\#ffa0a0\\ got a \\#ffff5a\\quintuple\\#ffa0a0\\ kill!",
+  kill_combo_large = "\\#ffa0a0\\Wow! %s\\#ffa0a0\\ got \\#ffff5a\\%d\\#ffa0a0\\ kills in a row!",
+  set_hack = "Hack set to %s",
+  incompatible_hack = "WARNING: Hack does not have compatibility!",
+  vanilla = "Using vanilla game",
+  omm_detected = "OMM Rebirth detected!",
+  omm_bad_version = "\\#ff5a5a\\OMM Rebirth is outdated!\\#ffffff\\\nMinimum version: %s\nYour version: %s",
+  warp_spam = "Slow down with the warps!",
+  no_valid_star = "Could not find a valid star!",
+  custom_enter = "%s\\#ffffff\\ entered\n%s", -- same as coop
+  vanish_custom = "Hold \\#ffff5a\\B\\#ffffff\\ to vanish!",
+  got_all_stars = "You have enough stars!",
+  unstuck = "Attempted to fix state",
+  use_out = "Use /mh out to warp everyone out of this level",
+  stars_in_area = "%d star(s) available here!",
+  demon_unlock = "Unlocked Green Demon mode!",
+  hit_switch_red = "%s\\#ffa0a0\\ hit the\n\\#df5050\\Red Switch!", -- dark red (unique)
+  hit_switch_green = "%s\\#ffa0a0\\ hit the\n\\#50b05a\\Green Switch!", -- dark green (unique)
+  hit_switch_blue = "%s\\#ffa0a0\\ hit the\n\\#5050e3\\Blue Switch!", -- dark blue (unique)
+  hit_switch_yellow = "%s\\#ffa0a0\\ hit the\n\\#e3b050\\Yellow Switch...", -- orangeish (unique)
+
+  -- command feedback
+  not_mod = "You don't have the AUTHORITY to run this command, you fool!",
+  no_such_player = "No such player exists",
+  bad_id = "Invalid player ID!",
+  command_disabled = "This command is disabled.",
+  change_setting = "Setting change:",
+  you_are_muted = "You are muted.",
+
+  -- more command feedback
+  bad_param = "Invalid parameters!",
+  bad_command = "Invalid command!",
+  error_no_runners = "Can't start game with 0 runners!",
+  set_team = "%s's team has been set to '%s'", -- First %s is player name, second is team name (now unused)
+  not_started = "Game hasn't been started yet",
+  set_lives_one = "%s now has 1 life",
+  set_lives = "%s now has %d lives",
+  not_runner = "%s isn't a Runner",
+  may_leave = "%s may leave",
+  must_have_one = "Must have at least 1 hunter",
+  added = "Added runners: ", -- list comes afterward
+  no_runners_added = "No Runners added",
+  runners_are = "Runners are: ",
+  set_lives_total = "Runner lives set to %d",
+  wrong_mode = "Not available in this mode",
+  need_time_feedback = "Runners can leave in %d second(s) now",
+  game_time = "Game now lasts %d second(s)",
+  need_stars_feedback = "Runners need %d star(s) now",
+  new_category = "This is now a %d star run",
+  new_category_any = "This is now an any% run",
+  mode_normal = "In Normal mode",
+  mode_swap = "In Swap mode",
+  mode_mini = "In MiniHunt mode",
+  using_stars = "Using stars collected",
+  using_timer = "Using timer",
+  can_spectate = "Hunters can now spectate",
+  no_spectate = "Hunters can no longer spectate",
+  all_paused = "All players paused",
+  all_unpaused = "All players unpaused",
+  player_paused = "%s has been paused",
+  player_unpaused = "%s has been unpaused",
+  hunter_metal = "All hunters are metal",
+  hunter_normal = "All hunters appear normal",
+  hunter_glow = "All hunters glow red",
+  hunter_outline = "All hunters have an outline",
+  hunter_color = "All hunters have the Burgundy palette", -- (check official lang for palette name)
+  runner_sparkle = "All runners now sparkle",
+  runner_normal = "All runners appear normal",
+  runner_glow = "All runners now glow",
+  runner_outline = "All runners have an outline",
+  runner_color = "All runners have the Azure palette", -- (check official lang for palette name)
+  now_weak = "All players have half invincibility frames",
+  not_weak = "All players have normal invincibility frames",
+  auto_on = "Games will start automatically",
+  auto_off = "Games will not start automatically",
+  force_spectate = "Everyone must spectate",
+  force_spectate_off = "Spectate is no longer forced",
+  force_spectate_one = "%s must spectate",
+  force_spectate_one_off = "%s does not have to spectate anymore",
+  blacklist_add = "Blacklisted %s",
+  blacklist_remove = "Whitelisted %s",
+  blacklist_add_already = "That star or level is already blacklisted.",
+  blacklist_remove_already = "That star or level isn't blacklisted.",
+  blacklist_remove_invalid = "Can't whitelist this star or level.",
+  blacklist_list = "Blacklisted:",
+  blacklist_reset = "Reset the blacklist!",
+  blacklist_save = "Blacklist saved!",
+  blacklist_load = "Blacklist loaded!",
+  anarchy_set_0 = "Players cannot attack their teammates",
+  anarchy_set_1 = "Runners can attack their teammates",
+  anarchy_set_2 = "Hunters can attack their teammates",
+  anarchy_set_3 = "Players can attack their teammates",
+  dmgAdd_set = "Runners will now take %d extra damage from PVP attacks.",
+  dmgAdd_set_ohko = "Runners will now die in one hit",
+  voidDmg_set = "Players will take %d damage from falling into the void or quicksand.",
+  voidDmg_set_ohko = "Players will instantly die from falling into the void or quicksand.",
+  target_hunters_only = "Only Hunters can set a target.",
+  muted = "\\#ffff00\\%s\\#ffffff\\ was muted by \\#ffff00\\%s\\#ffffff\\.",
+  unmuted = "\\#ffff00\\%s\\#ffffff\\ was unmuted by \\#ffff00\\%s\\#ffffff\\.",
+  you_muted = "You muted \\#ffff00\\%s\\#ffffff\\.",
+  you_unmuted = "You unmuted \\#ffff00\\%s\\#ffffff\\.",
+  mute_auto = "\\#ffff00\\%s\\#ffffff\\ was muted automatically.",
+
+  -- team chat
+  tc_toggle = "Team chat is %s!",
+  to_team = "\\#8a8a8a\\To team: ",
+  from_team = "\\#8a8a8a\\ (team): ",
+
+  -- vote skip
+  vote_skip = "%s\\#dcdcdc\\ voted to skip this star",
+  vote_info = "Type /skip to vote",
+  vote_pass = "The vote passed!",
+  already_voted = "You've already voted.",
+
+  -- hard mode
+  hard_notice = "Psst, try typing /hard...",
+  extreme_notice = "Psst, try typing /hard ex...",
+  hard_toggle = "\\#ff5a5a\\Hard Mode\\#ffffff\\ is %s!",
+  extreme_toggle = "\\#b45aff\\Extreme Mode\\#ffffff\\ is %s!",
+  hard_info = "Interested in \\#ff5a5a\\Hard Mode\\#ffffff\\?"..
+  "\n- Half health"..
+  "\n- No water heal"..
+  "\n- \\#ff5a5a\\One life"..
+  "\n\\#ffffff\\Type /hard ON if you're up for the challenge.",
+  extreme_info = "Are you drawn to \\#b45aff\\Extreme Mode\\#ffffff\\? How foolish."..
+  "\n- One life"..
+  "\n- One health"..
+  "\n- \\#b45aff\\Death Timer\\#ffffff\\; collect coins and stars to increase"..
+  "\nIf this doesn't scare you, type /hard ex ON.",
+  no_hard_win = "Your Hard Wins or Extreme Wins score will not be updated for this game.",
+  hard_mode = "Hard Mode",
+  extreme_mode = "Extreme Mode",
+  hard_info_short = "Half health, no water heal, and one life.",
+  extreme_info_short = "One health, one life, and death timer.",
+
+  -- spectator
+  hunters_only = "Only Hunters can spectate!",
+  spectate_disabled = "Spectate is disabled!",
+  timer_going = "Can't spectate during timer!", -- now unused
+  spectate_self = "Can't spectate yourself!",
+  spectator_controls = "Controls:"..
+  "\nDPAD-UP: Turn off hud"..
+  "\nDPAD-DOWN: Swap freecam/player view"..
+  "\nDPAD-LEFT / DPAD-RIGHT: Switch player"..
+  "\nJOYSTICK: Move"..
+  "\nA: Go up"..
+  "\nZ: Go down"..
+  "\nType \"/spectate OFF\" to cancel",
+  spectate_off = "No longer spectating.",
+  empty = "EMPTY (%d )",
+  free_camera = "FREE CAMERA",
+  spectate_mode = "- SPECTATOR MODE -",
+  is_spectator = '* PLAYER IS A SPECTATOR  *',
+
+  -- stats
+  disp_wins_one = "%s\\#ffffff\\ has won 1 time as \\#00ffff\\Runner\\#ffffff\\!",
+  disp_wins = "%s\\#ffffff\\ has won %d times as \\#00ffff\\Runner\\#ffffff\\!",
+  disp_kills_one = "%s\\#ffffff\\ has killed 1 player!", -- unused
+  disp_kills = "%s\\#ffffff\\ has killed %d players!",
+  disp_wins_hard_one = "%s\\#ffffff\\ has won 1 time as \\#ffff5a\\Runner\\#ffffff\\ in \\#ff5a5a\\Hard Mode!\\#ffffff\\",
+  disp_wins_hard = "%s\\#ffffff\\ has won %d times as \\#ffff5a\\Runner\\#ffffff\\ in \\#ff5a5a\\Hard Mode!\\#ffffff\\",
+  disp_wins_ex_one = "%s\\#ffffff\\ has won 1 time as \\#b45aff\\Runner\\#ffffff\\ in \\#b45aff\\Extreme Mode!\\#ffffff\\",
+  disp_wins_ex = "%s\\#ffffff\\ has won %d times as \\#b45aff\\Runner\\#ffffff\\ in \\#b45aff\\Extreme Mode!\\#ffffff\\",
+  -- for stats table
+  stat_wins_standard = "Wins",
+  stat_wins = "Wins (Minihunt/pre v2.3)",
+  stat_kills = "Kills",
+  stat_combo = "Max Kill Streak",
+  stat_wins_hard_standard = "Wins (Hard Mode)",
+  stat_wins_hard = "Wins (Hard Mode, MiniHunt/pre v2.3)",
+  stat_mini_stars = "Maximum Stars in one game of MiniHunt",
+  stat_placement = "64 Tour Placement",
+  stat_wins_ex_standard = "Wins (Extreme Mode)",
+  stat_wins_ex = "Wins (Extreme Mode, MiniHunt/pre v2.3)",
+  stat_playtime = "Playtime (Hours)",
+  stat_parkour_time = "Fastest Parkour Time",
+  stat_parkour_time_omm = "Fastest Parkour Time (OMM)",
+  stat_parkour_time_other = "Fastest Parkour Time (Moveset)",
+
+  -- placements
+  place_1 = "\\#e3bc2d\\[1st Place]",
+  place_2 = "\\#c5d8de\\[2nd Place]",
+  place_3 = "\\#b38752\\[3rd Place]",
+  place = "\\#e7a1ff\\[%dth Place]", -- thankfully we don't go up to 21
+  place_score_1 = "%dst",
+  place_score_2 = "%dnd",
+  place_score_3 = "%drd",
+  place_score = "%dth",
+
+  -- chat roles
+  role_lead = "\\#9a96ff\\[Lead MH Dev]",
+  role_dev = "\\#96ecff\\[MH Dev]",
+  role_cont = "\\#ff9696\\[MH Contributor]",
+  role_trans = "\\#ffd996\\[MH Translator]",
+
+  -- command descriptions
+  page = "\\#ffff5a\\Page %d/%d", -- page for mariohunt command
+  start_desc = "[CONTINUE|MAIN|ALT|RESET] - Starts the game; add \"continue\" to not warp to start; add \"alt\" for alt save file; add \"main\" for main save file; add \"reset\" to reset file",
+  add_desc = "[INT] - Adds the specified amount of runners at random",
+  random_desc = "[INT] - Picks the specified amount of runners at random",
+  lives_desc = "[INT] - Sets the amount of lives Runners have, from 0 to 99 (note: 0 lives is still 1 life)",
+  time_desc = "[NUM] - Sets the amount of time Runners have to wait to leave, in seconds, or the length of the game in MiniHunt.",
+  stars_desc = "[INT] - Sets the amount of stars Runners must collect to leave, from 0 to 7 (only in star mode)",
+  category_desc = "[INT] - Sets the amount of stars Runners must have to face Bowser.",
+  flip_desc = "[NAME|ID] - Flips the team of the specified player",
+  setlife_desc = "[NAME|ID|INT,INT] - Sets the specified lives for the specified runner",
+  leave_desc = "[NAME|ID] - Allows the specified player to leave the level if they are a runner",
+  mode_desc = "[NORMAL|SWAP|MINI] - Changes game mode; Swap switches runners when one dies",
+  starmode_desc = "[ON|OFF] - Toggles using stars collected instead of time",
+  spectator_desc = "[ON|OFF] - Toggles Hunters' ability to spectate",
+  pause_desc = "[NAME|ID|ALL] - Toggles pause status for specified players, or all if not specified",
+  hunter_app_desc = "Changes the appearance of Hunters.",
+  runner_app_desc = "Changes the appearance of Runners.",
+  hack_desc = "[STRING] - Sets current rom hack",
+  weak_desc = "[ON|OFF] - Cuts invincibility frames in half for all players",
+  auto_desc = "[ON|OFF|NUM] - Start games automatically",
+  forcespectate_desc = "[NAME|ID|ALL] - Toggle forcing spectate for this player or all players",
+  desync_desc = "- Attempts to fix desync errors",
+  stop_desc = "- Stop the game",
+  default_desc = "- Set settings to default",
+  blacklist_desc = "[ADD|REMOVE|LIST|RESET|SAVE|LOAD,COURSE,ACT] - Blacklist stars in MiniHunt",
+  stalking_desc = "[ON|OFF] - Allow warping to a Runner's level with /stalk",
+  mute_desc = "[NAME|ID] - Mutes a player, preventing them from chatting",
+  unmute_desc = "[NAME|ID] - Unmutes a player, allowing them to chat again",
+  out_desc = "- Kicks everyone out of this level",
+
+  -- Blocky's menu
+  main_menu = "Main Menu",
+  menu_mh = "MarioHunt",
+  menu_mh_egg = "LuigiHunt",
+  menu_settings_player = "Settings",
+  menu_rules = "Rules",
+  menu_list_settings = "List Settings",
+  menu_list_settings_desc = "Lists all settings for this lobby.",
+  menu_lang = "Language",
+  menu_misc = "Misc.",
+  menu_stats = "Stats",
+  menu_back = "Back",
+  menu_exit = "Exit",
+
+  menu_run_random = "Randomize Runners",
+  menu_run_add = "Add Runners",
+  menu_run_lives = "Runner Lives",
+  menu_settings = "Game Settings",
+
+  menu_start = "Start",
+  menu_stop = "Stop",
+  menu_save_main = "Main",
+  menu_save_alt = "Alt Save",
+  menu_save_reset = "Reset Alt Save",
+  menu_save_continue = "Continue (no warping back)",
+  menu_random = "Random",
+  menu_campaign = "Campaign",
+  menu_coop = "Coop",
+
+  menu_gamemode = "Gamemode",
+  menu_hunter_app = "Hunter Appearance",
+  menu_runner_app = "Runner Appearance",
+  menu_weak = "Weak Mode",
+  menu_allow_spectate = "Allow Spectating",
+  menu_star_mode = "Star Mode",
+  menu_category = "Category",
+  menu_time = "Time",
+  menu_stars = "Stars",
+  menu_auto = "Auto Game",
+  menu_blacklist = "MiniHunt Blacklist",
+  menu_default = "Reset to Defaults",
+  menu_anarchy = "Friendly Fire",
+  menu_anarchy_desc = "Allows the specified teams to attack their teammates.",
+  menu_dmgAdd = "Runner PVP DMG Up", -- DMG is "damage"
+  menu_dmgAdd_desc = "Add this much damage to attacks against Runners.",
+  menu_nerf_vanish = "Nerf Vanish Cap", -- Nerf, as in to reduce power for balancing
+  menu_nerf_vanish_desc = "Nerfs vanish cap by making it toggleable and drain faster when used.",
+  menu_first_timer = "Leader Death Timer",
+  menu_first_timer_desc = "Gives the leader in MiniHunt a death timer.",
+  menu_defeat_bowser = "Defeat %s",
+  menu_allow_stalk = "Allow 'Stalking'",
+  menu_countdown = "Countdown",
+  menu_countdown_desc = "How long Hunters must wait before starting.",
+  menu_voidDmg = "Void DMG",
+  menu_voidDmg_desc = "Damage dealt to players falling into the void or quicksand.",
+  menu_double_health = "Double Runner Health",
+  menu_double_health_desc = "Runners get 16 points of health instead of 8.",
+  menu_free_roam = "Free Roam",
+  menu_free_roam_desc = "Disables Star and Key requirements for doors and most levels.",
+  menu_star_heal = "Star Heal",
+  menu_stalk_timer = "Stalk Cooldown", -- needs translation
+  menu_stalk_timer_desc = "Time the player is frozen for after using /stalk.", -- needs translation
+
+  menu_flip = "Flip Team",
+  menu_spectate = "Spectate",
+  menu_stalk = "Warp To Level",
+  menu_stalk_desc = "Warp to this player's level.",
+  menu_pause = "Pause",
+  menu_forcespectate = "Force to Spectate",
+  menu_allowleave = "Allow to Leave",
+  menu_setlife = "Set Lives",
+  menu_players_all = "All Players",
+  menu_target = "Set as Target",
+  menu_mute = "Mute",
+
+  menu_timer = "Speedrun Timer",
+  menu_timer_desc = "[ON|OFF] - Show a timer at the bottom of the screen in Standard modes.",
+  menu_tc = "Team Chat",
+  menu_tc_desc = "Chat only with your team.",
+  menu_demon = "Green Demon", -- referring to the 1-Up
+  menu_demon_desc = "Have a 1-Up chase you as Runner.",
+  menu_unknown = "???",
+  menu_secret = "This is a secret. How do you unlock it?",
+  menu_hide_roles = "Hide My Roles",
+  menu_hide_roles_desc = "Hide your roles from displaying in chat.",
+  menu_hide_hud = "Hide HUD",
+  hidehud_desc = "- Hide all HUD elements.",
+  menu_fast = "Faster Actions",
+  menu_fast_desc = "You will recover, throw objects, and open doors faster.",
+  menu_popup_sound = "Popup Sounds",
+  menu_season = "Seasonal Changes",
+  menu_season_desc = "Fun visual changes depending on the date.",
+  menu_radar = "Radar",
+  menu_radar_desc = "Shows where Runners and important objects are.",
+  menu_minimap = "Minimap",
+  menu_minimap_desc = "Shows a map of the whole level.",
+  menu_romhack_cam = "Romhack Cam", -- (cam is short for camera)
+  menu_romhack_cam_desc = "Enables romhack camera at all times.", -- (cam is short for camera)
+  menu_invinc_particle = "Sparkle I-Frames", -- needs translation (I-Frames is short for invincibility/invulnerability frames)
+  menu_invinc_particle_desc = "Replaces the \"blinking\" effect when Mario takes damage with sparkle particles.", -- needs translation
+
+  menu_free_cam_desc = "Enter Free Camera in Spectator Mode.",
+  menu_spectate_run = "Spectate Runner",
+  menu_spectate_run_desc = "Automatically spectate the first Runner.",
+  menu_exit_spectate = "Exit Spectate",
+  menu_exit_spectate_desc = "Exit spectator mode.",
+  menu_stalk_run = "Warp to Runner Level",
+  menu_stalk_run_desc = "Warp to the level the first Runner is in.",
+  menu_skip = "Skip",
+  menu_skip_desc = "- Vote to skip this star in MiniHunt.",
+
+  menu_spectate_desc = "Spectate this player.",
+
+  menu_blacklist_list = "List All Blacklisted",
+  menu_blacklist_list_desc = "Lists all blacklisted stars in MiniHunt for this server.",
+  menu_blacklist_save = "Save Blacklist",
+  menu_blacklist_save_desc = "Save this blacklist on your end.",
+  menu_blacklist_load = "Load Blacklist",
+  menu_blacklist_load_desc = "Load your saved blacklist.",
+  menu_blacklist_reset = "Reset Blacklist",
+  menu_blacklist_reset_desc = "Reset the blacklist to the default.",
+  menu_toggle_all = "Toggle All",
+
+  -- updater
+  up_to_date = "\\#00ffff\\Mario\\#ff5a5a\\Hunt\\#ffffff\\ is up to date!",
+  up_to_date_egg = "\\#5aff5a\\Luigi\\#ff5a5a\\Hunt\\#ffffff\\ is up to date!",
+  has_update = "An update is avalible for \\#00ffff\\Mario\\#ff5a5a\\Hunt\\#ffffff\\!",
+  has_update_egg = "An update is avalible for \\#5aff5a\\Luigi\\#ff5a5a\\Hunt\\#ffffff\\!",
+
+  -- tips (needs translation)
+  -- I totally understand if you don't want to translate all of these.
+  tip = "Tip: ",
+  tip_1 = "Press L + Start, or type /mh, to open the menu. You can configure settings here!",
+  tip_2 = "Ground pounds deal 3 damage to other players.",
+  tip_3 = "A kick will deal 2 damage and send players flying!",
+  tip_4 = "For commands such as /spectate and /target, you can enter partial names and they'll still work (ex: entering \"Emily\" will refer to EmilyEmmi)",
+  tip_5 = "You can change settings mid-game in the menu.",
+  tip_6 = "If something goes wrong, type /mh pause to pause all players. Type it again to unpause.",
+  tip_7 = "Is someone spamming or using slurs? Use /mh mute to mute them!",
+  tip_8 = "You can pause the game before collecting a star or key and Exit Course to skip the animation.",
+  tip_9 = "You can target a Runner with /target. This will display their location at the top of the screen.",
+  tip_10 = "You can configure personal settings in the menu (L + Start).",
+  tip_11 = "No need to restart the server! Select \"Reset Alt Save\" in \"Start\" to reset all progress.",
+  tip_12 = "You can obtain Runner role by defeating a Runner.",
+  tip_13 = "Like in vanilla Mario 64, 0 lives still counts as a life.",
+  tip_14 = "Major glitches, such as LBLJ, are useless outside of Any%.",
+  tip_15 = "In-game signs may contain more helpful tips!",
+  tip_16 = "Dire Dire Docks may be entered at one less star than the actual category.",
+  tip_17 = "Set Cappy to \"Damage\" to use him as a ranged weapon. He deals 1 damage.",
+  tip_18 = "Cappy can pick up objects, such as Coins and Secrets.",
+  tip_19 = "Use the D-Pad to throw Cappy in different directions.",
+  tip_20 = "Check out Key's Artwork's video on YouTube to learn about OMM tech!",
+  tip_21 = "If objects in a level start to disappear or warps stop working, use /mh out in that level to force that level to reload.",
+  tip_22 = "Use /mh desync if you think a desync error has occured.",
+  tip_23 = "Killing another player will restore all of your health.",
+  tip_24 = "You can see progress on keys, caps, and secret stages in the Pause menu in the castle.",
+  tip_25 = "Runners can hurt each other in this mode!",
+  tip_26 = "Falling off in cap stages counts as losing a life.",
+  tip_27 = "Blue coin switches will respawn.",
+  tip_28 = "You can pick another act to throw off Hunters.",
+  tip_29 = "It's a holiday! If you don't like the effects, turn off \"Seasonal Changes\" in the menu.",
+  tip_30 = "You can spy on Runners with /spectate.",
+  tip_31 = "Use /stalk to warp to a level another Runner is in!",
+  tip_32 = "Learning speedrunning techniques is a good way to improve your game.",
+  tip_33 = "You can phase through Whomps by ground-pounding or kicking as they fall.",
+  tip_34 = "The fastest way to perform a Triple Jump is by kicking for the first jump.",
+  tip_35 = "Metal form deals double damage to opponents.",
+  tip_36 = "The Vanish Cap will only take effect when holding B.",
+  tip_37 = "Cap timers don't drain inside of cannons.",
+  tip_38 = "Don't linger on the Act Select for too long!",
+  tip_39 = "Dives are fast, and diving into another player can help you evade attacks.",
+  tip_40 = "Falling off will deal damage instead of instantly killing you.",
+  tip_41 = "1-Ups will restore all of your health.",
+  tip_42 = "Use the Players menu for commands that target a specific player, such as flipping teams.",
+  tip_43 = "The MarioHunt menu allows for starting games and configuring game settings.",
+  tip_44 = "You can hide your chat role in Settings.",
+  tip_45 = "Runners wearing the Metal Cap can still be hurt by Hunters.",
+  tip_46 = "In the menu, be sure to press A to save your changed settings!",
+
+  -- These commands only appear to me, so I wouldn't bother translating them. You can delete these lines and everything should still work.
+  print_desc = "[STRING] - Outputs message to console",
+  warp_desc = "[LEVEL|COURSE,AREA,ACT,NODE] - Warp to level",
+  quick_desc = "[LEVEL|COURSE|HUNTER,AREA,ACT,NODE] - Quick game testing",
+  combo_desc = "[NUM] - Test combo message",
+  field_desc = "[STRING] - Get specified field for all players",
+  gfield_desc = "[STRING] - Get specified global field",
+  allstars_desc = "- Lists all stars",
+  langtest_desc = "- Do language testing stuff",
+  unmod_desc = "- Toggle off mod for yourself for testing",
+  location_desc = "[NAME|ID] - Get your location, or whoever is specified",
+  complete_desc = "- 100%s the save file",
+  djui_desc = "- Opens djui menu",
+  swarp_desc = "- Does special warp (-1, -2, -3, -8, or -9)",
+  ["set-fov_desc"] = "[NUM] - Sets your fov; leave blank to reset",
+  ["wing-cap_desc"] = "- Grants wing cap",
+  ["kill-bowser_desc"] = "- Kills Bowser, if he exists",
+}
+
+
+
 -- language data ends here
 
 -- this generates a list of available languages for the command description
