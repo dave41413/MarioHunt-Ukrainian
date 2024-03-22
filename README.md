@@ -52,6 +52,8 @@ Italian translation made by **Mr.L-ore**
 
 Romania translation by **N64** (some translations provided by **EpikCool**)
 
+Unofficial Ukrainian translation by **Dave** (unfinished)
+
 If you would like to make changes or submit your own translation, check [here](wiki/lang.md) (does not exist yet) or inside lang.lua for details
 <br/>
 <br/>
